@@ -1,0 +1,10 @@
+apiVersion: app.example.com/v1alpha1
+kind: ExampleWorkshop
+metadata:
+  name: example-exampleworkshop
+spec:
+  # Add fields here
+  containerSpec:
+    name:  "busybox"
+    image: "busybox"
+    command: ["sleep", "1800"]
