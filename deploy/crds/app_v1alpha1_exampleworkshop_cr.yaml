@@ -1,0 +1,12 @@
+apiVersion: app.example.com/v1alpha1
+kind: ExampleWorkshop
+metadata:
+  name: example-exampleworkshop
+spec:
+  size: 3
+  redisContainer:
+    name: "redis"
+    image: "redis:5.0.5-alpine"
+    command: ["redis-server"]
+    containerPort: 5432
+    containerPortName: "redis"
