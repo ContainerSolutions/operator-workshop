@@ -1,6 +1,6 @@
 # Solution for Exercise-1
 
-In the [generated operator](https://google.pl) there is a default, hardcoded specification for the container and your role is to:
+In the [generated operator](https://github.com/ContainerSolutions/operator-workshop/blob/exercise-1/pkg/controller/exampleworkshop/exampleworkshop_controller.go) there is a default, hardcoded specification for the container and your role is to:
 
 * [Extend the api structure](https://github.com/ContainerSolutions/operator-workshop/blob/71cdfa9bbb7649405fbf900bfc349d471bfdcdf5/pkg/apis/app/v1alpha1/exampleworkshop_types.go#L16)
 * Regenerate the api `operator-sdk generate k8s` and `operator-sdk generate openapi"`
