@@ -84,7 +84,7 @@ func (r *ReconcileExampleWorkshop) Reconcile(request reconcile.Request) (reconci
 	reqLogger := log.WithValues("Request.Namespace", request.Namespace, "Request.Name", request.Name)
 	reqLogger.Info("Reconciling Redis")
 
-	// Fetch the Memcached instance
+	// Fetch the Redis instance
 	redis := &appv1alpha1.ExampleWorkshop{}
 	err := r.client.Get(context.TODO(), request.NamespacedName, redis)
 	if err != nil {
@@ -174,7 +174,7 @@ func (r *ReconcileExampleWorkshop) deploymentForRedis(m *appv1alpha1.ExampleWork
 }
 
 // labelsForRedis returns the labels for selecting the resources
-// belonging to the given memcached CR name.
+// belonging to the given Redis CR name.
 func labelsForRedis(name string) map[string]string {
 	return map[string]string{"app": "redis", "redis_cr": name}
 }
